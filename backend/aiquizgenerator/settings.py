@@ -31,7 +31,8 @@ if not SECRET_KEY:
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = [
-    host.strip() for host in os.getenv('ALLOWED_HOSTS', '').split(',') if host.strip()
+    "https://ai-quiz-generator-aae1.onrender.com",
+    "https://ai-quiz-generator-sepia.vercel.app/",
 ]
 if not ALLOWED_HOSTS and not DEBUG:
     raise ValueError("ALLOWED_HOSTS must be configured for production")
