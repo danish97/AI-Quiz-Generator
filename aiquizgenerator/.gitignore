@@ -1,0 +1,18 @@
+# python
+__pycache__/
+*.pyc
+db.sqlite3
+.env
+venv/
+
+# node
+node_modules/
+dist/
+.env
+
+# system
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
