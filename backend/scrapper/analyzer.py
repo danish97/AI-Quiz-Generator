@@ -165,7 +165,7 @@ Page Content:
     },
 )
 
-agent = ChatOpenAI(model="gpt-4", temperature=0.7)
+agent = ChatOpenAI(model="gpt-4o-mini", temperature=0.7, max_tokens = 1500)
 
 chain = prompt | agent | parser
 
