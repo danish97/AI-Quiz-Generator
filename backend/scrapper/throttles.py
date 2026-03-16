@@ -5,7 +5,7 @@ import time
 
 class QuizGenerationThrottle(SimpleRateThrottle):
     scope = "quiz_generation"
-    rate = '2/10s'  # 2 requests per 10 seconds
+    rate = '5/m'   # 2 requests per 10 seconds
 
     def get_cache_key(self, request, view):
         return self.get_ident(request)
