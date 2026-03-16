@@ -31,8 +31,8 @@ if not SECRET_KEY:
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = [
-    "https://ai-quiz-generator-aae1.onrender.com",
-    "https://ai-quiz-generator-sepia.vercel.app/",
+    "ai-quiz-generator-aae1.onrender.com",
+    "ai-quiz-generator-sepia.vercel.app/",
 ]
 if not ALLOWED_HOSTS and not DEBUG:
     raise ValueError("ALLOWED_HOSTS must be configured for production")
@@ -58,7 +58,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "https://ai-quiz-generator-sepia.vercel.app",
+    "ai-quiz-generator-sepia.vercel.app",
 ]
 
 MIDDLEWARE = [
