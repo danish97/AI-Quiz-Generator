@@ -1,6 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from django.views.decorators.csrf import csrf_exempt
 
 from .extractor import content_extractor, ai_input
 from .serializers import ScrapeRequestSerializer
@@ -8,7 +9,7 @@ from .analyzer import analyze_product_page
 from .throttles import QuizGenerationThrottle
 
 # Create your views here.
-
+@csrf_exempt
 class ScrapProductView(APIView):
     throttle_classes = [QuizGenerationThrottle]
 
